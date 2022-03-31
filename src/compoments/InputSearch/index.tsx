@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { FormEvent, useState } from 'react';
-import { TransactionContext } from '../../pages/context/TransactionContext';
 import { Container } from './styles';
 
 // interface InputSearchProps {
@@ -8,7 +7,7 @@ import { Container } from './styles';
 // }
 
 function InputSearch() {
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState<string | undefined>();
   const router = useRouter();
   // Evento do form
   async function handleSearchMovie(e: FormEvent<HTMLFormElement>) {
@@ -18,16 +17,14 @@ function InputSearch() {
     return router.push(`/?search=${search}&page=1`);
   }
   return (
-    <TransactionContext.Provider value={search}>
-      <Container onSubmit={handleSearchMovie}>
-        <input
-          type="text"
-          placeholder="Procure por um filme..."
-          onChange={({ target }) => setSearch(target.value)}
-        />
-        <button type="submit">Pesquisar</button>
-      </Container>
-    </TransactionContext.Provider>
+    <Container onSubmit={handleSearchMovie}>
+      <input
+        type="text"
+        placeholder="Procure por um filme..."
+        onChange={({ target }) => setSearch(target.value)}
+      />
+      <button type="submit">Pesquisar</button>
+    </Container>
   );
 }
 
