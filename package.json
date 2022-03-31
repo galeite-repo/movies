@@ -8,11 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "dotenv": "^16.0.0",
+    "moment": "^2.29.1",
     "next": "10.2.0",
     "next-images": "^1.7.0",
+    "nextjs-progressbar": "^0.0.14",
+    "polished": "^4.1.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.3.0"
+    "react-hot-toast": "^2.2.0",
+    "react-icons": "^4.3.1",
+    "react-moment": "^1.1.1",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/node": "^15.3.0",
