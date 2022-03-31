@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Moment from 'react-moment';
-import { AiOutlineStar } from 'react-icons/Ai';
+import { AiOutlineStar } from 'react-icons/ai';
 import Description from './Description';
 import { Container, Rating, Year } from './styles';
 
